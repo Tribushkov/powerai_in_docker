@@ -6,7 +6,7 @@ export MAVEN_REPO=apache-maven-3.5.2-bin.tar.gz
 # install OpenJDK http://openjdk.java.net/install/
 apt-get update && apt-get install -y \
     openjdk-8-jdk \
-    openjfx \
+    openjfx &&\
     apt-get clean
 
 echo 'export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-ppc64el' >> ~/.bashrc
@@ -17,4 +17,4 @@ cd /opt && \
     tar -xvzf ${MAVEN_REPO} && \
     mv apache-maven-3.5.2 maven
 
-echo 'export PATH=$PATH:~/opt/maven/bin' >> ~/.bashrc 
+echo 'export PATH=$PATH:/opt/maven/bin' >> ~/.bashrc
